@@ -1,22 +1,24 @@
 <template>
   <Layout>
-    <carousel
-      :per-page="1"
-      :loop="true"
-      :navigationEnabled="true"
-      :navigationNextLabel="nextIcon"
-      :navigationPrevLabel="previousIcon"
-      :scrollPerPage="true"
-      paginationPosition="bottom"
-      paginationColor="#31363d"
-      paginationActiveColor="#4ecca3"
-      :perPageCustom="[[768,2], [1024, 3]]"
-      :speed="800"
-    >
-      <slide v-for="edge in $page.portfolio.edges" :key="edge.node.id">
-        <WorkCard :work="edge.node" />
-      </slide>
-    </carousel>
+    <ClientOnly>
+      <carousel
+        :per-page="1"
+        :loop="true"
+        :navigationEnabled="true"
+        :navigationNextLabel="nextIcon"
+        :navigationPrevLabel="previousIcon"
+        :scrollPerPage="true"
+        paginationPosition="bottom"
+        paginationColor="#31363d"
+        paginationActiveColor="#4ecca3"
+        :perPageCustom="[[768,2], [1024, 3]]"
+        :speed="800"
+      >
+        <slide v-for="edge in $page.portfolio.edges" :key="edge.node.id">
+          <WorkCard :work="edge.node" />
+        </slide>
+      </carousel>
+    </ClientOnly>
   </Layout>
 </template>
 
@@ -44,7 +46,7 @@ query{
 
 <script>
 import WorkCard from '~/components/WorkCard.vue';
-import { Carousel, Slide } from 'vue-carousel';
+
 export default {
   data() {
     return {};
@@ -65,8 +67,14 @@ style=" fill:var(--bg-header);">    <path d="M11.109,3L11.109,3C9.78,3,8.988,4.4
   },
   components: {
     WorkCard,
-    Carousel,
-    Slide
+    Carousel: () =>
+      import('vue-carousel')
+        .then(m => m.Carousel)
+        .catch(),
+    Slide: () =>
+      import('vue-carousel')
+        .then(m => m.Slide)
+        .catch()
   },
   metaInfo: {
     title: 'Work'
