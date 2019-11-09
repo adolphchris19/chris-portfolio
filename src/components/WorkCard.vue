@@ -1,6 +1,5 @@
 <template>
   <div class="work-card">
-    <!-- :style="{backgroundImage: `url(${work.cover_image})`}" -->
     <div class="work-card-details-container">
       <div class="work-card-header">
         <g-image alt="Cover Image" class="work-image" :src="work.cover_image" />

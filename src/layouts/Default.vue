@@ -20,12 +20,27 @@
     <footer class="footer">
       <div class="footer__content">
         <p>
-          Built with 🍻 by
-          <a target="_blank" href="//edmundekott.me">Edmund Ekott</a>
+          <a target="_blank" href="#" class="social-icon">
+            <unicon name="dribbble" fill="currentColor" />
+          </a>
+          <a target="_blank" href="#" class="social-icon">
+            <unicon name="behance" fill="currentColor" />
+          </a>
+          <a target="_blank" href="#" class="social-icon">
+            <unicon name="github" fill="currentColor" />
+          </a>
+          <a target="_blank" href="#" class="social-icon">
+            <unicon name="twitter" fill="currentColor" />
+          </a>
+          <a target="_blank" href="#" class="social-icon">
+            <unicon name="linkedin" fill="currentColor" />
+          </a>
+          <a target="_blank" href="#" class="social-icon">
+            <unicon name="medium-m" fill="currentColor" />
+          </a>
         </p>
         <p>
-          Powered by
-          <a target="_blank" href="//gridsome.org">Gridsome</a>
+          <small>&copy; {{new Date().getFullYear()}} {{$static.metadata.siteName}}, All rights reserved.</small>
         </p>
       </div>
     </footer>
@@ -54,7 +69,7 @@ export default {
 <style lang='scss'>
 .wrapper {
   background-color: var(--bg-color);
-  min-height: 80vh;
+  min-height: 100vh;
   padding-top: 40px;
 }
 .layout {
@@ -108,7 +123,15 @@ export default {
     a {
       color: currentColor;
       text-decoration: underline;
+
+      &:hover {
+        color: var(--link-color);
+      }
     }
+  }
+
+  .social-icon {
+    margin-left: 10px;
   }
 }
 @media screen and (max-width: 650px) {
