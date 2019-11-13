@@ -94,7 +94,7 @@ export default {
 @media screen and (max-width: 625px) {
   .work-card {
     width: 90%;
-    height: 280px;
+    height: 450px;
     margin-top: 30px;
   }
 }

@@ -6,7 +6,7 @@ tags: [design, mobile]
 client: Hapi
 role: Product Design
 link: example.com
-cover_image: 'https://images.unsplash.com/photo-1472772224448-b24d00409675?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
+cover_image: ./images/md-test.jpeg
 description: "Markdown is intended to be as easy-to-read and easy-to-write as is feasible. Readability, however, is emphasized above all else. A Markdown-formatted document should be publishable as-is, as plain text, without looking like it's been marked up with tags or formatting instructions."
 ---
 
