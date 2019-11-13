@@ -1,13 +1,15 @@
 <template>
   <Layout>
-    <h2 class="bottom-line">Looking to get in touch?</h2>
-    <p>
-      If you would like to inquire about a new project, speaking engagements, chat about product design or just say a friendly hello, please feel free to reach via
-      <a
-        class="email-link"
-        href="mailto:adolphchris19@gmail.com"
-      >email</a>.
-    </p>
+    <div class="layout">
+      <h2 class="bottom-line">Looking to get in touch?</h2>
+      <p>
+        If you would like to inquire about a new project, speaking engagements, chat about product design or just say a friendly hello, please feel free to reach via
+        <a
+          class="email-link"
+          href="mailto:adolphchris19@gmail.com"
+        >email</a>.
+      </p>
+    </div>
   </Layout>
 </template>
 

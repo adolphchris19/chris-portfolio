@@ -1,23 +1,25 @@
 <template>
   <Layout>
     <ClientOnly>
-      <carousel
-        :per-page="1"
-        :loop="true"
-        :navigationEnabled="true"
-        :navigationNextLabel="nextIcon"
-        :navigationPrevLabel="previousIcon"
-        :scrollPerPage="true"
-        paginationPosition="bottom"
-        paginationColor="#31363d"
-        paginationActiveColor="#4ecca3"
-        :perPageCustom="[[768,2], [1024, 3]]"
-        :speed="800"
-      >
-        <slide v-for="edge in $page.portfolio.edges" :key="edge.node.id">
-          <WorkCard :work="edge.node" />
-        </slide>
-      </carousel>
+      <div class="carousel-container">
+        <carousel
+          :per-page="1"
+          :loop="true"
+          :navigationEnabled="true"
+          :navigationNextLabel="nextIcon"
+          :navigationPrevLabel="previousIcon"
+          :scrollPerPage="true"
+          paginationPosition="bottom-overlay"
+          paginationColor="#31363d"
+          paginationActiveColor="#4ecca3"
+          :perPageCustom="[[768,2], [1024, 3]]"
+          :speed="800"
+        >
+          <slide v-for="(edge, index) in $page.portfolio.edges" :key="edge.node.id">
+            <WorkCard :work="edge.node" :index="index" />
+          </slide>
+        </carousel>
+      </div>
     </ClientOnly>
   </Layout>
 </template>
@@ -83,6 +85,10 @@ style=" fill:var(--bg-header);">    <path d="M11.109,3L11.109,3C9.78,3,8.988,4.4
 </script>
 
 <style lang="scss">
+.carousel-container {
+  max-width: 90%;
+  margin: auto;
+}
 .VueCarousel-navigation /deep/ button.VueCarousel-navigation-button {
   &:focus {
     outline: none;
@@ -92,10 +98,21 @@ style=" fill:var(--bg-header);">    <path d="M11.109,3L11.109,3C9.78,3,8.988,4.4
 @media screen and (max-width: 768px) {
   .VueCarousel-navigation /deep/ button.VueCarousel-navigation-button {
     &.VueCarousel-navigation-next {
-      right: 20px;
+      right: 10px;
     }
     &.VueCarousel-navigation-prev {
-      left: 20px;
+      left: 10px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .VueCarousel-navigation /deep/ button.VueCarousel-navigation-button {
+    &.VueCarousel-navigation-next {
+      right: 25px;
+      padding-right: 0px !important;
+    }
+    &.VueCarousel-navigation-prev {
+      left: 25px;
     }
   }
 }

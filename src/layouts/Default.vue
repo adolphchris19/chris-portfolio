@@ -13,9 +13,7 @@
       </div>
     </header>
     <div class="wrapper">
-      <div class="layout">
-        <slot />
-      </div>
+      <slot />
     </div>
     <footer class="footer">
       <div class="footer__content">

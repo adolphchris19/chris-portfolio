@@ -1,30 +1,32 @@
 <template>
   <Layout>
-    <div class="work-container">
-      <aside class="sidebar">
-        <h3 class="no-space-top">{{$page.work.title}}</h3>
-        <p>{{$page.work.description}}</p>
-        <hr />
-        <p class="work-details">
-          <strong>Year</strong>
-          <span>{{$page.work.date}}</span>
-        </p>
-        <p class="work-details">
-          <strong>Client</strong>
-          <span>{{$page.work.client}}</span>
-        </p>
-        <p class="work-details">
-          <strong>Role</strong>
-          <span>{{$page.work.client}}</span>
-        </p>
-        <p class="work-details">
-          <strong>Link</strong>
-          <a :href="`//${$page.work.link}`" class="work-link" target="_blank">{{$page.work.link}}</a>
-        </p>
-      </aside>
-      <article class="content">
-        <div v-html="$page.work.content"></div>
-      </article>
+    <div class="layout">
+      <div class="work-container">
+        <aside class="sidebar">
+          <h3 class="no-space-top">{{$page.work.title}}</h3>
+          <p>{{$page.work.description}}</p>
+          <hr />
+          <p class="work-details">
+            <strong>Year</strong>
+            <span>{{$page.work.date}}</span>
+          </p>
+          <p class="work-details">
+            <strong>Client</strong>
+            <span>{{$page.work.client}}</span>
+          </p>
+          <p class="work-details">
+            <strong>Role</strong>
+            <span>{{$page.work.client}}</span>
+          </p>
+          <p class="work-details">
+            <strong>Link</strong>
+            <a :href="`//${$page.work.link}`" class="work-link" target="_blank">{{$page.work.link}}</a>
+          </p>
+        </aside>
+        <article class="content">
+          <div v-html="$page.work.content"></div>
+        </article>
+      </div>
     </div>
   </Layout>
 </template>

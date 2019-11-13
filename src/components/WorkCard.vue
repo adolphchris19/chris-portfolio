@@ -1,72 +1,70 @@
 <template>
-  <div class="work-card">
+  <div class="work-card" :style="{background: randomColor}">
     <div class="work-card-details-container">
-      <div class="work-card-header">
-        <g-image alt="Cover Image" class="work-image" :src="work.cover_image" />
-      </div>
-      <div class="work-card-details">
-        <h4 class="work-card-title" v-html="work.title"></h4>
-        <small v-html="work.date"></small>
-      </div>
-      <WorkTags :work="work" v-if="work.tags" />
-
-      <g-link class="work-card-link" :to="work.path">Link</g-link>
+      <g-image alt="Cover Image" class="work-image" :src="work.cover_image" />
+      <h4 class="work-card-title" v-html="work.title"></h4>
     </div>
+    <g-link class="work-card-link" :to="work.path">Link</g-link>
   </div>
 </template>
 
 <script>
-import WorkTags from './WorkTags.vue';
 export default {
-  components: {
-    WorkTags
-  },
-  props: ['work']
+  components: {},
+  props: ['work', 'index'],
+  computed: {
+    randomColor: function() {
+      let colors = [
+        'linear-gradient(0deg, rgb(12, 4, 64) 0%, rgb(11, 38, 133) 43%, rgb(47, 141, 245) 100%)', // blue shade
+        'linear-gradient(0deg, rgba(1,0,8,1) 0%, rgba(88,9,121,1) 43%, rgba(124,0,255,1) 100%)', // deep purple shade
+        'linear-gradient(0deg, rgb(12, 6, 33) 0%, rgb(52, 18, 121) 46%, rgb(120, 59, 206) 100%)' // middle shade
+      ];
+      if (this.index % 3 == 0) {
+        return colors[1];
+      } else if (this.index % 2 == 0) {
+        return colors[0];
+      } else {
+        return colors[2];
+      }
+    }
+  }
 };
 </script>
 
 
 <style lang="scss">
 .work-card {
-  width: 270px;
-  height: 250px;
-  border-radius: 10px;
-  background-color: var(--work-card-bg);
+  width: 100%;
+  height: 480px;
   overflow: hidden;
   margin: auto;
+  position: relative;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2f2f2f7c;
+  }
   &-details-container {
     padding: 1rem;
     height: 100%;
-    transition: transform 0.3s;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #17192098;
-      z-index: 2;
+    .work-image {
+      // margin-bottom: 3rem;
     }
-  }
-
-  &-details {
-    position: absolute;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
   }
 
   &-title {
     margin-top: 0;
-  }
-
-  &:hover &-details-container {
-    transform: scale(1.07);
-    transition: transform 0.3s;
+    position: absolute;
+    bottom: 10%;
   }
 
   &-link {
@@ -80,23 +78,43 @@ export default {
     z-index: 4;
     opacity: 0;
   }
-}
-.work-card-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  height: 150px;
-  overflow: hidden;
+
+  &:hover {
+    .work-image {
+      margin-bottom: 40px;
+      transition: margin-bottom 0.3s;
+    }
+  }
 }
 .work-image {
   min-width: 100%;
+  margin-bottom: 25px;
+  transition: margin-bottom 0.3s;
 }
 @media screen and (max-width: 625px) {
   .work-card {
     width: 90%;
     height: 280px;
     margin-top: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .work-card {
+    height: 550px;
+  }
+  .work-card-title {
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .work-card {
+    height: 800px;
+  }
+  .work-card-title {
+    font-size: 2rem;
+    margin-top: 20px;
   }
 }
 </style>
