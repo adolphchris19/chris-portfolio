@@ -93,14 +93,14 @@ export default {
 }
 @media screen and (max-width: 625px) {
   .work-card {
-    width: 90%;
+    width: 100%;
     height: 450px;
     margin-top: 30px;
   }
 }
 @media screen and (min-width: 1440px) {
   .work-card {
-    height: 550px;
+    height: 650px;
   }
   .work-card-title {
     font-size: 2rem;
@@ -110,7 +110,7 @@ export default {
 
 @media screen and (min-width: 2560px) {
   .work-card {
-    height: 800px;
+    height: 1000px;
   }
   .work-card-title {
     font-size: 2rem;

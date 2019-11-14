@@ -67,7 +67,7 @@ export default {
 <style lang='scss'>
 .wrapper {
   background-color: var(--bg-color);
-  min-height: 70vh;
+  min-height: 100vh;
   padding-top: 40px;
 }
 .layout {
