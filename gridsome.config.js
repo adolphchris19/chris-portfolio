@@ -22,6 +22,13 @@ module.exports = {
       options: {
         publicPath: `/admin`
       }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['Portfolio'],
+        coverField: 'cover_image'
+      }
     }
   ],
   transformers: {
