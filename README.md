@@ -2,7 +2,7 @@
 
 > A starter template for Gridsome for designers and developers to tell stories about their work.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/adolphchris19/chris-portfolio)
+<!-- [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/adolphchris19/chris-portfolio) -->
 
 ## Features
 
