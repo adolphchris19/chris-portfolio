@@ -5,7 +5,7 @@ published: true
 client: Google
 role: mobile development
 link: google.com
-cover_image: ./images/patrick-tomasso-KGcLJwIYiac-unsplash.jpg
+cover_image: ../images/patrick-tomasso-KGcLJwIYiac-unsplash.jpg
 description: This is a demo case study for a mobile app
 ---
 

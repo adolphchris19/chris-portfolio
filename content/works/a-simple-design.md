@@ -5,7 +5,7 @@ published: true
 client: Google
 role: Product designer
 link: google.com
-cover_image: ./images/boxed-water-is-better-7mr6Yx-8WLc-unsplash.jpg
+cover_image: ../images/boxed-water-is-better-7mr6Yx-8WLc-unsplash.jpg
 description: The magic of paint brush and a a little coffee
 ---
 

@@ -5,7 +5,7 @@ published: true
 client: Google
 role: Product designer
 link: google.com
-cover_image: ./images/eftakher-alam-i1VQZsU86ok-unsplash.jpg
+cover_image: ../images/eftakher-alam-i1VQZsU86ok-unsplash.jpg
 description: The magic of paint brush and a a little coffee
 ---
 
