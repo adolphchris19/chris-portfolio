@@ -18,22 +18,22 @@
     <footer class="footer">
       <div class="footer__content">
         <p>
-          <a target="_blank" href="#" class="social-icon">
+          <a target="_blank" href="https://dribbble.com/chRisD19" class="social-icon">
             <unicon name="dribbble" fill="currentColor" />
           </a>
-          <a target="_blank" href="#" class="social-icon">
+          <!-- <a target="_blank" href="#" class="social-icon">
             <unicon name="behance" fill="currentColor" />
           </a>
           <a target="_blank" href="#" class="social-icon">
             <unicon name="github" fill="currentColor" />
-          </a>
-          <a target="_blank" href="#" class="social-icon">
+          </a> -->
+          <a target="_blank" href="https://twitter.com/Dev_khris" class="social-icon">
             <unicon name="twitter" fill="currentColor" />
           </a>
-          <a target="_blank" href="#" class="social-icon">
+          <a target="_blank" href="https://www.linkedin.com/in/chris-adolphus/" class="social-icon">
             <unicon name="linkedin" fill="currentColor" />
           </a>
-          <a target="_blank" href="#" class="social-icon">
+          <a target="_blank" href="https://medium.com/@dev_khris" class="social-icon">
             <unicon name="medium-m" fill="currentColor" />
           </a>
         </p>
@@ -67,7 +67,6 @@ export default {
 <style lang='scss'>
 .wrapper {
   background-color: var(--bg-color);
-  min-height: 100vh;
   padding-top: 40px;
 }
 .layout {
@@ -111,7 +110,7 @@ export default {
 
 .footer {
   background: var(--bg-footer);
-  height: 200px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -150,7 +149,7 @@ export default {
     max-width: 1000px;
   }
   .wrapper {
-    min-height: 100vh;
+    min-height: 80vh;
   }
 }
 </style>

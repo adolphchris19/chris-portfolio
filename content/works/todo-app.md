@@ -2,7 +2,6 @@
 title: A todo app
 date: 2019-02-20
 published: true
-tags: [social, product design]
 client: Google
 role: Product designer
 link: google.com

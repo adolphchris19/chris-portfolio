@@ -3,7 +3,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body {
+  height: 100%;
+}
 .layout a:not(.button) {
   color: var(--link-color);
 }

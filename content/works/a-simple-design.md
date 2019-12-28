@@ -2,7 +2,6 @@
 title: A simple design for Halo
 date: 2019-02-04
 published: true
-tags: [mobile, product design]
 client: Google
 role: Product designer
 link: google.com

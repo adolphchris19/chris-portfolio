@@ -2,7 +2,6 @@
 title: Random app demo
 date: 2019-02-07
 published: true
-tags: [design, mobile]
 client: Google
 role: mobile development
 link: google.com

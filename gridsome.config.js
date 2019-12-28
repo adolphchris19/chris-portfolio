@@ -7,21 +7,20 @@
 module.exports = {
   siteName: 'Chris Adolphus',
   templates: {
-    Portfolio: '/portfolio/:title',
-    Tag: '/tag/:id'
+    Portfolio: '/portfolio/:title'
   },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Portfolio',
-        path: 'content/works/*.md',
-        refs: {
-          tags: {
-            typeName: 'Tag',
-            create: true
-          }
-        }
+        path: 'content/works/*.md'
+      }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
       }
     }
   ],

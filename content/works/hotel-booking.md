@@ -2,7 +2,6 @@
 title: Hotel booking app
 date: 2019-04-06
 published: true
-tags: [mobile, product design]
 client: Google
 role: Product designer
 link: google.com

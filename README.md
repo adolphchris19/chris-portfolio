@@ -1,9 +1,8 @@
 # Portfolio story starter for Gridsome
 
-
 > A starter template for Gridsome for designers and developers to tell stories about their work.
 
-
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/adolphchris19/chris-portfolio)
 
 ## Features
 
@@ -12,8 +11,6 @@
 3. Dark mode by default
 4. Markdown for content
 
-## Demo URL
-[gridsome-portfolio-story.netlify.com](https://gridsome-portfolio-story.netlify.com/)
 ## Installation
 
 ### 1. Install Gridsome CLI tool if you don't have

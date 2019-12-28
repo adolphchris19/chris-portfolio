@@ -34,11 +34,6 @@ query{
         path
         cover_image(width: 700, height: 400, blur: 7, fit:cover )
         date(format: "D. MMMM YYYY")
-        tags{
-          id
-          title
-          path
-        }
       }
     }
   }
