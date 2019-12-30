@@ -23,6 +23,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'About'
+    identifier_field: 'about page'
     label: 'About'
     folder: 'content/about'
     delete: false
