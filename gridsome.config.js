@@ -7,7 +7,8 @@
 module.exports = {
   siteName: 'Chris Adolphus',
   templates: {
-    Portfolio: '/portfolio/:title'
+    Portfolio: '/portfolio/:title',
+    About: '/about'
   },
   plugins: [
     {
@@ -15,6 +16,13 @@ module.exports = {
       options: {
         typeName: 'Portfolio',
         path: 'content/works/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'About',
+        path: 'content/about/*.md'
       }
     },
     {
@@ -28,6 +36,13 @@ module.exports = {
       options: {
         contentTypes: ['Portfolio'],
         coverField: 'cover_image'
+      }
+    },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['About'],
+        coverField: 'profile_image'
       }
     }
   ],
