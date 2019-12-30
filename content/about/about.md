@@ -1,4 +1,5 @@
 ---
+title: about
 profile_image: /uploads/images/person.jpg
 ---
 
